@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" style="padding-top: 50px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scada Fabrication Machines</title>
+    <link rel="shortcut icon" href="/images/mini_logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- ////////////// CHƯƠNG TRÌNH HỆ THỐNG ////////////// -->
+    <script src = "socket.io/socket.io.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="/js/chart.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/chart.css">
+</head>
+<body>
+    <%- include('partials/header'); -%>
+    <div style="display: flex; justify-content: space-around;">
+        <div id="chartContainer1" style="height: 500px; width: 65%;"></div>
+        <div id="chartContainer2" style="height: 500px; width: 35%;"></div>
+    </div>
+
+    <hr>
+    <h2 style="text-align: center;">NĂNG SUẤT TỪNG MÁY</h2>
+    <!-- <div class="radio_container">
+        <input class="abc" name="abc" type="radio"> 
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+        <input class="abc" name="abc" type="radio">
+    </div> -->
+
+    <div class="radio_container">
+        <div class="unit_radio_container">
+            <input class="abc" id="abc1" name="abc" type="radio"> 
+            <label for="abc1">Máy 1</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc2" name="abc" type="radio">
+            <label for="abc2">Máy 2</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc3" name="abc" type="radio">
+            <label for="abc3">Máy 3</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc4" name="abc" type="radio">
+            <label for="abc4">Máy 4</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc5" name="abc" type="radio">
+            <label for="abc5">Máy 5</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc6" name="abc" type="radio">
+            <label for="abc6">Máy 6</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc7" name="abc" type="radio">
+            <label for="abc7">Máy 7</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc8" name="abc" type="radio">
+            <label for="abc8">Máy 8</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc9" name="abc" type="radio">
+            <label for="abc9">Máy 9</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc10" name="abc" type="radio">
+            <label for="abc10">Máy 10</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc11" name="abc" type="radio">
+            <label for="abc11">Máy 11</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc12" name="abc" type="radio">
+            <label for="abc12">Máy 12</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc13" name="abc" type="radio">
+            <label for="abc13">Máy 13</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc14" name="abc" type="radio">
+            <label for="abc14">Máy 14</label>
+        </div>
+        <div class="unit_radio_container">
+            <input class="abc" id="abc15" name="abc" type="radio">
+            <label for="abc15">Máy 15</label>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="divtable">
+        <table class="tablechart">
+            <tr>
+                <td colspan="5">NĂNG SUẤT HOẠT ĐỘNG TỪNG XƯỞNG</td>
+            </tr>
+            <tr>
+                <td style="background-color: white;">XƯỞNG A</td>
+                <td style="background-color: white;">XƯỞNG B</td>
+                <td style="background-color: white">XƯỞNG C</td>
+                <td style="background-color: white;">XƯỞNG D</td>
+                <td style="background-color: white;">XƯỞNG E</td>
+            </tr>
+            <tr>
+                <td style="background-color: white;">0000</td>
+                <td style="background-color: white">0000</td>
+                <td style="background-color: white">0000</td>
+                <td style="background-color: white;">0000</td>
+                <td style="background-color: white;">0000</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

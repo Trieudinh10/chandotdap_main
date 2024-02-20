@@ -1,0 +1,7 @@
+tại index.js chính, route(app) được gọi thì trong routes/index.js nếu home được gọi thì hàm homeRouter được gọi, homeRouter được gọi thì file home được gọi 
+home được gọi thì homeController.index được gọi => index (req, res) {
+        res.render('home');
+    } được gọi 
+
+
+    

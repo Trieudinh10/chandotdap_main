@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <!-- <%= JSON.stringify(userEdit) %> -->
+
+<div class="form">
+<form action="/update_user" method="POST">
+    <fieldset>
+    <legend> Update USER</legend>
+
+    <div class="com_input dnone">
+    <label for="">Id:</label>
+    <input type="text" name="userId" value="<%= userEdit.id %>">
+    </div>
+
+    <div class="com_input">
+    <label for="">Mail</label>
+    <input type="text" name="email" value="<%= userEdit.email %>">
+    </div>
+
+    <!-- <div class="com_input">
+        <label for="">name</label>
+        <input type="text" name="name" value="<%= userEdit.name %>">
+    </div> -->
+
+    <div class="com_input">
+        <label for="">pasword</label>
+        <input type="text" name="password" value="<%= userEdit.password %>">
+    </div>
+    <div>
+        <button>SAVE</button>
+        <a href="/user">Quay trở lại</a>
+    </div>
+    </fieldset>
+</form>
+      </div>
+</body>
+</html>

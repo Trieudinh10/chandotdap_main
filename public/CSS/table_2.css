@@ -1,0 +1,121 @@
+.table_2_page{
+    padding-top:46px ;
+    margin: 0 auto;
+    justify-content: center;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+.con_document {
+    display: flex; /* Thêm thuộc tính này để sử dụng flexbox */
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px -5px #555;
+    margin-top: 16px;
+    border: 1px;
+    border: 1px solid ;
+}
+
+.con_document_1{
+    width: 10%;
+    height: 60px;
+    border-radius: 8px 0 0 8px; /* Điều chỉnh border-radius của .con_document_1 */
+    border: 1px solid ;
+}
+
+.con_document_2 {
+    width: 20%;
+    height: 60px;
+    border: 1px solid ;
+}
+p{
+    text-align: center;
+    padding-top: 8px;
+}
+
+.btn_document{
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    margin-left: 1400px;
+    height: 36px;
+    width: 100px;
+}
+.btn_document1{
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    margin-left: 10px;
+    height: 36px;
+    width: 100px;
+}
+.btn_document2{
+    margin-top: 16px;
+    margin-bottom: auto;
+    position: relative;
+    margin-left: 1580px;
+    height: 36px;
+    width: 100px;
+}
+.btn_document3{
+    margin-top: 16px;
+    margin-bottom: auto;
+    position: relative;
+    margin-left: 10px;
+    height: 36px;
+    width: 100px;
+}
+
+.con_device{
+    display: flex; /* Thêm thuộc tính này để sử dụng flexbox */
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.select_device{
+    width: 200px;
+    border-radius: 8px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 16px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0486aa;
+    color: white;
+  }
+  .stt_center{
+    text-align: center;
+  }
+
+

@@ -1,0 +1,63 @@
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 46px;
+    /* background-image: linear-gradient(90deg, rgba(252, 255, 63, 1), rgb(0 162 213 / 85%)); */
+    background-color: palegoldenrod;
+    display: flex;
+    font-weight: 500;
+    box-shadow: 0 5px 8px -5px #555;
+    z-index: 9999;
+}
+
+.logo_agri {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+.logo_agri img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+}
+
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.menu ul a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.menu ul a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: rgb(255, 0, 0);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.menu ul a:hover::before {
+    width: 100%;
+}
+
+.title{
+    font-size: 18px;
+}

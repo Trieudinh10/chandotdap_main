@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scada Fabrication Machines</title>
+    <link rel="shortcut icon" href="/images/mini_logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- ////////////// CHƯƠNG TRÌNH HỆ THỐNG ////////////// -->
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" href="/css/fontawesome-free-6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo_agri">
+            <img src="/images/logo_agri.png" alt="logo" />
+          </div>
+
+          <div class="menu">
+            <ul>
+                <li><i class="fa-solid fa-house-chimney-window fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/">TRANG CHỦ</a></li>
+
+                <li><i class="fa-solid fa-table fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/table_1">NHÓM MÁY 1</a></li>
+
+                <li><i class="fa-regular fa-file fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/table_2">TÀI LIỆU</a></li>
+
+                <li><i class="fa-solid fa-chart-line fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/chart">NĂNG SUẤT</a></li>
+
+                <li><i class="fa-solid fa-database fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/data">DỮ LIỆU</a></li>
+
+                <li><i class="fa-solid fa-gears fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/setting">CÀI ĐẶT</a></li>
+
+                <% if (user) { %>
+                <li> <i class="fa-solid fa-user fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/user">USER</a></li>
+                <!-- <li><i class="fa-solid fa-gears fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/use">USER</a></li> -->
+                <li><i class="fa-solid fa-arrow-right-from-bracket fa-xl" style="color: #4d8efe; padding-left: 50px;"></i><a href="/logout">Log out</a></li>
+                <li style="opacity: 0.7; font-weight: 500px; color: #07539D;">Welcome, <%= user.email %>!</li>
+                <% } else { %>
+                <li><i class="fa-solid fa-arrow-right-to-bracket fa-xl" style="color: #4d8efe; padding-left: 96px;"></i><a href="/login">Log in</a></li>
+                <li><i class="fa-solid fa-arrow-right-to-bracket fa-xl" style="color: #4d8efe; padding-left: 96px;"></i><a href="/signup">Sign up</a></li>
+                <!-- <li><i class="fa-solid fa-gears fa-xl" style="color: #4d8efe; padding-left: 16px;"></i><a href="/signup">Sign up</a></li> -->
+                <% } %>
+            </ul>
+          </div>
+        <h2 class="title" style="width: 450px; color: #4d8efe;">SCADA THIẾT BỊ XƯỞNG CHẾ TẠO</h2>
+    </div>
+
+</body>
+</html>

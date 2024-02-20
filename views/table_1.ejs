@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" style="margin-top: 50px; position: fixed;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scada Fabrication Machines</title>
+    <link rel="shortcut icon" href="/images/mini_logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fontawesome-free-6.4.2/css/all.min.css">
+
+    <!-- ////////////// CHƯƠNG TRÌNH HỆ THỐNG ////////////// -->
+    <script src = "socket.io/socket.io.js"></script>
+    <script src="/js/FC1_common.js"></script>
+    <script src="/js/FC2_edit.js"></script>
+    <script src="/js/table1_caculate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/table_1.css">
+
+</head>
+<body class="all">
+    <%- include('partials/header'); -%>
+    </div>
+    <section class="home-section">
+
+        <div class="background-img">
+            <img src="/images/layout.jpg" alt="logo">
+            <!-- 1 -->
+            <!-- <div class="machine machine-3">
+                <p style="line-height: 0;">Máy 3</p>
+                <i style="color: orange;" class="fa-solid fa-angles-right"></i>
+            </div> -->
+            <div class="dot dot-1 bg-green"></div>
+            <div class="dot dot-1-1 bg-red"></div>
+            <div class="dot dot-1-2 bg-yellow"></div>
+            <div class="dot dot-1-3 bg-green"></div>
+            <div class="dot dot-1-4 bg-red"></div>
+            <div class="dot dot-1-5 bg-red"></div>
+            <div class="dot dot-2 bg-yellow"></div>
+            <div class="dot dot-3 bg-green"></div>
+            <div class="dot dot-4 bg-yellow"></div>
+            <div class="dot dot-5 bg-green"></div>
+            <!-- end -->
+
+        </div>
+        <div class="over-lay"></div>
+        <div class="popup">
+            <div class="popup-head">
+                <div class="popup-head_inside">
+                    <h1 style="font-size: 25px;">Máy 3 - Máy dập OCP 110</h1>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-body_img">
+                  <img src="/images/may_chan.png" alt="logo">
+                </div>
+                <div class="popup-body_detail">
+                    <div class="popup-body_container">
+                        <h3>
+                            Trạng thái
+                        </h3>
+                        <div class="module_innershape">RUN</div>
+                    </div>
+                    <div class="popup-body_container">
+                        <h3>
+                            Thời gian chạy
+                        </h3>
+                        <div class="module_innershape">120 m</div>
+                    </div>
+                    <div class="popup-body_container">
+                        <h3>
+                            Thời gian dừng
+                        </h3>
+                        <div class="module_innershape">60 m</div>
+                    </div>
+                    <div class="popup-body_container">
+                        <h3>
+                            Hiệu suất
+                        </h3>
+                        <div class="module_innershape">66.67%</div>
+                    </div>
+                    <div class="popup-body_container">
+                        <h3>
+                            Mã khuôn
+                        </h3>
+                        <div class="module_innershape">H102</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+</body>
+</html>

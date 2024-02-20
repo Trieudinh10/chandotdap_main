@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/user.css">
+    
+</head>
+<body style="padding-top: 50px;">
+    <%- include('partials/header'); -%>
+    <!-- <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/create">Create user</a>
+      </div> -->
+<!-- <%= JSON.stringify(listUser) %> -->
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Mail</th>
+          <th>Password</th>
+          <th>Actions</th>
+        </tr>
+        
+        <% for (let i = 0; i < listUser.length; i++) { %>
+            <tr>
+                <td><%= listUser[i].id %></td>
+                <td><%= listUser[i].email %></td>
+                <td><%= listUser[i].password %></td>
+
+                <td>
+                  <a href="/update/<%= listUser[i].id %>"> Edit</a>
+                  <form action="/delete_user/<%= listUser[i].id %>" method="POST" >
+                  <button>Delete</button>
+                </form>
+                </td>
+                
+              </tr>
+        <%} %>
+      </table>
+</body>
+</html>

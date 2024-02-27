@@ -1,0 +1,27 @@
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  
+  .image {
+    background-image: url('/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Sử dụng chiều cao 100% của viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+  }
+  
+  

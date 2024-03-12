@@ -4,7 +4,7 @@
     --light: #f6f6f9;
     --primary: #1976D2;
     --light-primary: #CFE8FF;
-    --grey: #ffffff;
+    --grey: #eee;
     --dark-grey: #AAAAAA;
     --dark: #363949;
     --danger: #D32F2F;
@@ -559,6 +559,11 @@ body{
 
 .content main .bottom-data .reminders .task-list li:last-child{
    margin-bottom: 0;
+}
+
+.logo_id{
+    width: 10px;
+    margin: 0 25px;
 }
 
 @media screen and (max-width: 768px) {

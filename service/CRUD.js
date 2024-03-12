@@ -13,6 +13,13 @@ const getUserById = async(userId) => {
     return user;
 }
 
+const getUserByEmail = async(email) => {
+    let [results, fields] = await connection.query('SELECT * FROM users where id = ?', [email]);
+        console.log( 'req.params:', results )
+    let user = results && results.length > 0 ? results[0] : {};
+    return user;
+}
+
 const  upDateUserById = async(email, password, userId) => {
     let [results, fields] = await connection.query(
         `UPDATE users 
@@ -54,5 +61,6 @@ module.exports = {
     getUserById,
     upDateUserById,
     deleteUserById,
+    getUserByEmail
     // getAdmin
 }

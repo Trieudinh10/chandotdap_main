@@ -16,17 +16,18 @@
         <a href="#" class="logo">
             <!-- <i class='bx bx-code-alt'></i>
             <div class="logo-name"><span>Thaco</span>Industries</div> -->
+            <img class="logo_id" src="images/logo_i.png">
             <img src="images/logo_agri.png">
         </a>
         <ul class="side-menu">
-            <li class="active"><a href="/"><i class='bx bxs-dashboard'></i>Trang Chủ</a></li>
+            <li><a href="/"><i class='bx bxs-dashboard'></i>Trang Chủ</a></li>
             <li><a href="/table_1"><i class='bx bx-store-alt'></i>Nhóm Máy</a></li>
             <li><a href="/chart"><i class='bx bx-analyse'></i>Năng Suất</a></li>
-            <li ><a href="/table_2"><i class='bx bx-message-square-dots'></i>Tài Liệu</a></li>
+            <li><a href="/table_2"><i class='bx bx-message-square-dots'></i>Tài Liệu</a></li>
             <li><a href="/data"><i class='bx bx-message-square-dots'></i>Dữ Liệu</a></li>
-            <li ><a href="/setting"><i class='bx bx-cog'></i>Cài Đặt</a></li>
+            <li><a href="/setting"><i class='bx bx-cog'></i>Cài Đặt</a></li>
             <% if (user) { %>
-                <li  ><a href="/user"><i class='bx bx-group'></i>Users</a></li>
+                <li><a href="/user"><i class='bx bx-group'></i>Users</a></li>
 
         </ul>
         <ul class="side-menu">
@@ -56,6 +57,7 @@
                     <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
                 </div>
             </form>
+            <li style="opacity: 0.7; font-weight: 500px; color: #07539D;">Welcome,!</li>
             <input type="checkbox" id="theme-toggle" hidden>
             <label for="theme-toggle" class="theme-toggle"></label>
             <a href="#" class="notif">
@@ -69,63 +71,88 @@
 
         <!-- End of Navbar -->
 
+        <!-- <script src="/js/active.js"></script> -->
         <script>
-           const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
+            // Lưu trạng thái active vào localStorage khi một mục được chọn
+            const saveActiveState = (activeItem) => {
+                localStorage.setItem('activeItem', activeItem);
+            };
 
-sideLinks.forEach(item => {
-    const li = item.parentElement;
-    item.addEventListener('click', () => {
-        sideLinks.forEach(i => {
-            i.parentElement.classList.remove('active');
-        })
-        li.classList.add('active');
-    })
-});
+            // Lấy trạng thái active từ localStorage khi trang được tải
+            document.addEventListener('DOMContentLoaded', () => {
+                const activeItem = localStorage.getItem('activeItem');
+                const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
 
-const menuBar = document.querySelector('.content nav .bx.bx-menu');
-const sideBar = document.querySelector('.sidebar');
+                if (activeItem) {
+                    sideLinks.forEach(item => {
+                        const li = item.parentElement;
+                        if (li.textContent.trim() === activeItem) {
+                            li.classList.add('active');
+                        }
+                    });
+                }
+            });
 
-menuBar.addEventListener('click', () => {
-    sideBar.classList.toggle('close');
-});
+            const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
 
-const searchBtn = document.querySelector('.content nav form .form-input button');
-const searchBtnIcon = document.querySelector('.content nav form .form-input button .bx');
-const searchForm = document.querySelector('.content nav form');
+            sideLinks.forEach(item => {
+                const li = item.parentElement;
+                item.addEventListener('click', () => {
+                    sideLinks.forEach(i => {
+                        i.parentElement.classList.remove('active');
+                    });
+                    li.classList.add('active');
+                    saveActiveState(li.textContent.trim()); // Lưu trạng thái active
+                });
+            });
 
-searchBtn.addEventListener('click', function (e) {
-    if (window.innerWidth < 576) {
-        e.preventDefault;
-        searchForm.classList.toggle('show');
-        if (searchForm.classList.contains('show')) {
-            searchBtnIcon.classList.replace('bx-search', 'bx-x');
-        } else {
-            searchBtnIcon.classList.replace('bx-x', 'bx-search');
-        }
-    }
-});
+            const menuBar = document.querySelector('.content nav .bx.bx-menu');
+            const sideBar = document.querySelector('.sidebar');
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) {
-        sideBar.classList.add('close');
-    } else {
-        sideBar.classList.remove('close');
-    }
-    if (window.innerWidth > 576) {
-        searchBtnIcon.classList.replace('bx-x', 'bx-search');
-        searchForm.classList.remove('show');
-    }
-});
+            menuBar.addEventListener('click', () => {
+                sideBar.classList.toggle('close');
+            });
 
-const toggler = document.getElementById('theme-toggle');
+            const searchBtn = document.querySelector('.content nav form .form-input button');
+            const searchBtnIcon = document.querySelector('.content nav form .form-input button .bx');
+            const searchForm = document.querySelector('.content nav form');
 
-toggler.addEventListener('change', function () {
-    if (this.checked) {
-        document.body.classList.add('dark');
-    } else {
-        document.body.classList.remove('dark');
-    }
-});
+            searchBtn.addEventListener('click', function (e) {
+                if (window.innerWidth < 576) {
+                    e.preventDefault;
+                    searchForm.classList.toggle('show');
+                    if (searchForm.classList.contains('show')) {
+                        searchBtnIcon.classList.replace('bx-search', 'bx-x');
+                    } else {
+                        searchBtnIcon.classList.replace('bx-x', 'bx-search');
+                    }
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth < 768) {
+                    sideBar.classList.add('close');
+                } else {
+                    sideBar.classList.remove('close');
+                }
+                if (window.innerWidth > 576) {
+                    searchBtnIcon.classList.replace('bx-x', 'bx-search');
+                    searchForm.classList.remove('show');
+                }
+            });
+
+            const toggler = document.getElementById('theme-toggle');
+
+            toggler.addEventListener('change', function () {
+                if (this.checked) {
+                    document.body.classList.add('dark');
+                } else {
+                    document.body.classList.remove('dark');
+                }
+            });
+
+
+
 
         </script>
 </body>

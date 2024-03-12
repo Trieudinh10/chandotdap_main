@@ -1,10 +1,15 @@
 // const connection = require('../config/database')
-const {getAllUser, getUserById, upDateUserById, deleteUserById } = require('../service/CRUD')
+const {getAllUser, getUserById, upDateUserById, deleteUserById, getUserByEmail } = require('../service/CRUD')
 
 const getHomepage = async(req, res) => {
 let results = await getAllUser();
   return res.render('user', {listUser: results});
 }
+
+const getUserByMail = async(req, res) => {
+  let user = await getUserByEmail();
+    return res.render('sidebar.ejs', {email: user});
+  }
 
 const getUpdatePage = async(req, res) => {
   const userId = req.params.id;
@@ -42,6 +47,7 @@ module.exports = {
     postDeleteuser,
     postRemoveuser,
     getUpdatePage,
-    postUpdateuser
+    postUpdateuser,
+    getUserByMail
 }
 
